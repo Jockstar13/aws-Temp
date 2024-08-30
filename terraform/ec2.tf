@@ -1,7 +1,7 @@
 resource "aws_instance" "bastion-server" {
   depends_on                  = [aws_key_pair.ec2-key-pair]
   subnet_id                   = aws_subnet.dmz-subnet.id
-  ami                         = "ami-0f403e3180720dd7e"
+  ami                         = "ami-05e8d879909cfe987"
   instance_type               = "t2.micro"
   associate_public_ip_address = true
   key_name                    = "kamel_key_pair"
