@@ -1,5 +1,5 @@
 resource "aws_key_pair" "ec2-key-pair" {
-  key_name   = "kamel_key_pair"
+  key_name   = "hashim_key_pair"
   public_key = tls_private_key.rsa.public_key_openssh
 }
 
