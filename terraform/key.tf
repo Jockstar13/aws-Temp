@@ -10,5 +10,5 @@ resource "tls_private_key" "rsa" {
 
 resource "local_file" "ec2-key" {
   content  = tls_private_key.rsa.private_key_pem
-  filename = "kamel"
+  filename = "hashim"
 }
