@@ -4,7 +4,7 @@ resource "aws_instance" "bastion-server" {
   ami                         = "ami-0f403e3180720dd7e"
   instance_type               = "t2.micro"
   associate_public_ip_address = true
-  key_name                    = "kamel_key_pair"
+  key_name                    = "hashim_key_pair"
   vpc_security_group_ids      = [aws_security_group.allow-ssh.id, aws_security_group.allow-all-outbound.id]
 
   tags = {
@@ -19,7 +19,7 @@ resource "aws_instance" "web-server" {
   ami                         = "ami-05e8d879909cfe987" # ami of my custom amazon image
   instance_type               = "t2.micro"
   associate_public_ip_address = false
-  key_name                    = "kamel_key_pair"
+  key_name                    = "hashim_key_pair"
   vpc_security_group_ids      = [
     aws_security_group.allow-ssh.id,
     aws_security_group.allow-8080.id,
